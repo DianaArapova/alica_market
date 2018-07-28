@@ -1,3 +1,7 @@
+from pprint import pprint
+import json
+
+
 class AliceRequest(object):
     def __init__(self, request_dict):
         self._request_dict = request_dict
@@ -8,7 +12,14 @@ class AliceRequest(object):
 
     @property
     def session(self):
+        print("lol")
+
+        print('session' in self._request_dict)
         return self._request_dict['session']
+
+    @property
+    def session_id(self):
+        return self._request_dict['session']['session_id']
 
     @property
     def user_id(self):

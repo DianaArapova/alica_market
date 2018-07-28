@@ -1,6 +1,9 @@
 import json
+
+
 class AliceResponse(object):
     def __init__(self, alice_request):
+        print(type(alice_request))
         self._response_dict = {
             "version": alice_request.version,
             "session": alice_request.session,

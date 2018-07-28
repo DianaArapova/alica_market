@@ -2,17 +2,28 @@ from flask import Flask, request
 from AliceRequest import AliceRequest
 from AliceResponse import AliceResponse
 from manager import Manager
+from context import Context
+
+
 server = Flask(__name__)
 manager = Manager()
 
 
+sessions = dict()
+
 
 @server.route("/", methods=['POST'])
 def get_message():
-    requestDict = AliceRequest(request.stream.read().decode("utf-8"))
-    response = manager.manage(requestDict)
+    print("Kek")
+    print(request.get_json())
+    requestDict = AliceRequest(request.get_json())
 
-    return AliceResponse(response), 200
+    if requestDict.session_id not in sessions:
+        sessions[requestDict.session_id] = Context()
+
+    response = manager.manage(requestDict, sessions)
+
+    return response, 200
     return '''{
   "response": {
     "text": "Здравствуйте! Это мы, хороводоведы.",
