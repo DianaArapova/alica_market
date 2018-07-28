@@ -11,6 +11,7 @@ class Manager:
         session = sessions[aliceRequest.session_id]
         response = AliceResponse(aliceRequest)
 
+
         if session.step == 0:
             sessions[aliceRequest.session_id].set_size(aliceRequest.command)
 
@@ -27,6 +28,7 @@ class Manager:
             response.set_text(self.script[session.step])
         else:
             response.set_text("Мы подобрали тебе платье, но пока его тебе не покажем")
+            response.add_image("213044/662b5dfbdee1189d5fd6", "Title", "123", "http://e1.ru")
 
         sessions[aliceRequest.session_id].step += 1
         return response.dumps()
