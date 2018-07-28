@@ -1,15 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="4f15fa54-b1b8-457d-ad9c-a96c15c255ac" name="Default" comment="add request and response">
-      <change afterPath="$PROJECT_DIR$/context.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/script.py" afterDir="false" />
+    <list default="true" id="4f15fa54-b1b8-457d-ad9c-a96c15c255ac" name="Default" comment="Работает!!!">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AliceRequest.py" beforeDir="false" afterPath="$PROJECT_DIR$/AliceRequest.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AliceResponse.py" beforeDir="false" afterPath="$PROJECT_DIR$/AliceResponse.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/manager.py" beforeDir="false" afterPath="$PROJECT_DIR$/manager.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server.py" beforeDir="false" afterPath="$PROJECT_DIR$/server.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/translator.py" beforeDir="false" afterPath="$PROJECT_DIR$/translator.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -43,12 +36,12 @@
           <entry key="dummy" value="15" />
           <entry key="gitignore" value="5" />
           <entry key="py" value="1792" />
-          <entry key="txt" value="37" />
+          <entry key="txt" value="48" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="PLAIN_TEXT" value="57" />
+          <entry key="PLAIN_TEXT" value="68" />
           <entry key="Python" value="1792" />
         </counts>
       </usages-collector>
@@ -84,8 +77,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/manager.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="210">
-              <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
+            <state relative-caret-position="342">
+              <caret line="21" lean-forward="true" selection-start-line="21" selection-end-line="21" />
               <folding>
                 <element signature="e#0#37#0" expanded="true" />
                 <marker date="1532769482201" expanded="true" signature="120:125" ph="..." />
@@ -134,6 +127,14 @@
         <option value="Python Script" />
       </list>
     </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>.session</find>
+    </findStrings>
+    <replaceStrings>
+      <replace>.session_id</replace>
+    </replaceStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -263,7 +264,14 @@
       <option name="project" value="LOCAL" />
       <updated>1532765729756</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Работает!!!">
+      <created>1532769533753</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1532769533753</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -296,7 +304,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="add gitignore" />
     <MESSAGE value="add request and response" />
-    <option name="LAST_COMMIT_MESSAGE" value="add request and response" />
+    <MESSAGE value="Работает!!!" />
+    <option name="LAST_COMMIT_MESSAGE" value="Работает!!!" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -461,8 +470,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/manager.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
+        <state relative-caret-position="342">
+          <caret line="21" lean-forward="true" selection-start-line="21" selection-end-line="21" />
           <folding>
             <element signature="e#0#37#0" expanded="true" />
             <marker date="1532769482201" expanded="true" signature="120:125" ph="..." />
