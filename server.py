@@ -14,8 +14,6 @@ sessions = dict()
 
 @server.route("/", methods=['POST'])
 def get_message():
-    print("Kek")
-    print(request.get_json())
     requestDict = AliceRequest(request.get_json())
 
     if requestDict.session_id not in sessions:
