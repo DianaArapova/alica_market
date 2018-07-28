@@ -12,11 +12,13 @@ class Manager:
         self.translator = Translator()
 
     def manage(self, aliceRequest:AliceRequest, sessions: dict):
-        if aliceRequest.is_new_session:
-            return self.first_mes
-
         session = sessions[aliceRequest.session_id]
         response = AliceResponse(aliceRequest)
+
+        if aliceRequest.is_new_session:
+            return response.set_text(self.first_mes).dumps()
+        if aliceRequest.command.lower().find("пока") != -1:
+            return response.end().dumps()
 
         if session.step == 0:
             sessions[aliceRequest.session_id].set_size(self.translator.get_value(aliceRequest.command, Commands.Size))
