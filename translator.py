@@ -4,7 +4,22 @@ from Common.commands import Commands
 class Translator:
     def __init__(self):
         self.words_for_price = {"дешев": (0, 1000), "средн": (0, 3000), "миллио": (30000, 400000)}
-        self.words_for_style = {"Вечер": "5924", "красив" : "5924", "дел": "5926", "повседнев": "5922", "спорт": "5925"}
+        self.words_for_style = {
+            "Вечер": "5924",
+            "красив": "5924",
+            "свадьб": "5924",
+            "выпуск": "5924",
+
+            "дел": "5926",
+            "работ": "5926",
+
+            "повседнев": "5922",
+            "гуля": "5922",
+
+            "спорт": "5925",
+            "бег": "5925"
+        }
+
         self.words_for_color = {
             "розов" : "623",
             "белый" : "615",
@@ -30,10 +45,13 @@ class Translator:
                 return sizes[0]
             return None
         if command == Commands.Color:
-            for word_for_color in self.words_for_color:
-                if text.find(word_for_color) != -1:
-                    return self.words_for_color[word_for_color]
-            return None
+            return self.get_value_to_color(text)
+
+    def get_value_to_color(self, text):
+        for word_for_color in self.words_for_color:
+            if text.find(word_for_color) != -1:
+                return self.words_for_color[word_for_color]
+        return None
 
     def get_value_to_style(self, text):
         for word_for_style in self.words_for_style:
