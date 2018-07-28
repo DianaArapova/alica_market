@@ -8,9 +8,13 @@ from Common.commands import Commands
 class Manager:
     def __init__(self):
         self.script = Script().script
+        self.first_mes = Script().first_message
         self.translator = Translator()
 
     def manage(self, aliceRequest:AliceRequest, sessions: dict):
+        if aliceRequest.is_new_session:
+            return self.first_mes
+
         session = sessions[aliceRequest.session_id]
         response = AliceResponse(aliceRequest)
 
