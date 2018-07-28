@@ -33,7 +33,7 @@ class Manager:
         if session.step < len(self.script):
             response.set_text(self.script[session.step])
         else:
-            response.set_text("Мы подобрали тебе платье, но пока его тебе не покажем")
+            response.set_text(sessions[aliceRequest.session_id].build_url)
             response.add_image("213044/662b5dfbdee1189d5fd6", "Title", "123", "http://e1.ru")
 
         sessions[aliceRequest.session_id].step += 1
